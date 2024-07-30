@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  method="post">
+
+        <label for="Username">Username</label>
+        <input type="text" name="Username">
+
+        <label for="Password">Password</label>
+        <input type="password" name="Password">
+
+
+        <label for="Age">Age</label>
+        <input type="number" name="Age">
+
+        <label for="Email">Email</label>
+        <input type="email" name="Email">
+
+        <input type="submit" value="submit">
+
+    </form>
+    <h3> Alreeady you have an account please login</h3>
+    <a href="{{ url_for('login') }}" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; text-align: center; border-radius: 5px; text-decoration: none;">Login</a>
+
+</body>
+</html>

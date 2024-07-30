@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+    .table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for vertical centering */
+    }
+
+    table {
+    border-collapse: collapse;
+    background-color: aqua;
+    }
+
+    th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    }
+
+    </style>
+</head>
+<body>
+    <table border="all" class="table-container">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Edit</th>
+
+
+        </tr>
+        {% for i in data %}
+       , <tr>
+            <td>{{ i.Username }}</td>
+            <td>{{ i.Age }}</td>
+            <td>{{ i.Email }}</td>
+            <td><a href="{{ url_for('edit',id=i.id)}}">Edit</a></td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
